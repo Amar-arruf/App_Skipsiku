@@ -130,7 +130,7 @@
     </aside>
     <!-- Akhir menu dashboard -->
     <main
-      class="main-content positive-relative max-height-vh-100 border-radius-lg"
+      class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
     >
       <!-- Navbar -->
       <nav
