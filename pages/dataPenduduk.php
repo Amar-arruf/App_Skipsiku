@@ -213,7 +213,8 @@
                 </div>
               </div>
               <div class="card-body px-0 pb-2">
-                <a href="" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
+                <!-- Tombol Tambah -->
+                <a href="../CRUD/tambahDataPenduduk.php" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
                 <div class="table-responsive p-0">
                   <table class="table align-intems-center mb-0">
                     <thead>
@@ -248,10 +249,10 @@
                           <p class="text-xs font-weight-bold mb-0"><?= substr($row["Alamat"],0,49); ?></p>
                         </td>
                         <td class="align-middle text-center text-sm">
-                          <a href="" class="btn btn-info btn-sm mb-0">
+                          <a href="../CRUD/ubahDataPenduduk.php?id=<?= $row["Alternatif_id"]; ?>" class="btn btn-info btn-sm mb-0">
                             Ubah 
                           </a>
-                          <a href="" class="btn btn-primary btn-sm mb-0">
+                          <a href="../CRUD/hapus.php?id=<?= $row["Alternatif_id"]; ?>"  class="btn btn-primary btn-sm mb-0">
                             Hapus
                           </a>
                         </td>
