@@ -267,6 +267,7 @@ require '../config/config.php';
         </div>
       </div>
     </div>
+    <!-- Akhir form Tambah -->
   </main>
 
   <!--   Core JS Files   -->

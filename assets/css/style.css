@@ -1,0 +1,16 @@
+.g-sidenav-show:not(.rtl) .sidenav {
+  transform: translateX(-17.125rem);
+}
+
+.g-sidenav-show.g-sidenav-pinned .sidenav {
+  transform: translateX(0);
+}
+.sidenav.fixed-start + .main-content.notactive {
+  margin-left: 0rem !important;
+}
+
+@media (min-width: 1200px) {
+  .d-xl-none {
+    display: flex !important;
+  }
+}
