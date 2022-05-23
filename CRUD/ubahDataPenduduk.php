@@ -1,11 +1,23 @@
 <?php 
+error_reporting(E_ALL ^ E_WARNING|| E_NOTICE);
 require '../config/config.php';
+ // mengambil data Dari Form
+require '../config/getDataForm.php';
+
 // ambil data di Url
 $id = $_GET["id"];
 
-// query data mahasiswa berdasarkan id
+// query getdata berdasarkan id
 $dat = query("SELECT * FROM `data penduduk` WHERE Alternatif_id = '$id'")[0];
 
+$QueryUbah = "UPDATE `data penduduk` SET 
+                name = '$Nama',
+                Tanggal_Lahir= '$ttl',
+                Jenis_Kelamin = '$Jk',
+                Alamat = '$alamat',
+                diupdate = current_timestamp()
+                WHERE Alternatif_id = '$alternatifID'"
+              ;
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +54,7 @@ $dat = query("SELECT * FROM `data penduduk` WHERE Alternatif_id = '$id'")[0];
     href="../assets/css/material-dashboard.css?v=3.0.2"
     rel="stylesheet"
   />
-  <title>Halaman Dashboard | Tambah Data Pendduduk</title>
+  <title>Halaman Dashboard | Ubah Data Penduduk</title>
 </head>
 <body class="g-sidenav-show bg-gray-300">
   <!-- menu dashboard -->
@@ -285,7 +297,7 @@ $dat = query("SELECT * FROM `data penduduk` WHERE Alternatif_id = '$id'")[0];
 // cek apakah tombol submit ditekan atau tidak
 if(isset($_POST["submit"])) {
   // cek Apakah data berhasil ditambah atau tidak
-  if (ubah($_POST) > 0) {
+  if (ubah($QueryUbah) > 0) {
     echo "
     <script>
       swal('Bagus!', 'data Berhasil Diubah!', 'success')

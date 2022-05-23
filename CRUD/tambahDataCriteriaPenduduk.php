@@ -1,10 +1,18 @@
 <?php 
+  error_reporting(E_ALL ^ E_WARNING|| E_NOTICE);
  // koneksi ke database
  require '../config/config.php';
+ // mengambil data Dari Form
+ require '../config/getDataForm.php';
 
 // ambil data / get Query
-$sql = "SELECT `Alternatif id` FROM `data_penduduk_value`";
+$sql = "SELECT `Alternatif_id` FROM `data penduduk`";
 $getQuery = query($sql);
+$QueryTambah = "INSERT INTO `data_penduduk_value` 
+                VALUES 
+                ('$pendudukid','$Alternatifid','$Penghasilan','$luasrumah','$stsrumah','$sumberair','$ibuhamil','$lansia','$jml_tanggungan_anak','$jenis_dinding','$jenis_lantai','$jenis_atap','$kelas_keputusan')
+               ";
+
 ?>
 
 <!DOCTYPE html>
@@ -209,17 +217,17 @@ $getQuery = query($sql);
         <div class="col-12">
           <div class="card my-4">
             <div class="card-header p-0 mx-3 mb-0">
-              <h5 class="text-dark text-capitalize ps-3 my-3">Tambah Data Criteria</h5>
+              <h5 class="text-dark text-capitalize ps-3 my-3">Tambah Data Criteria Penduduk</h5>
             </div>
             <hr class="my-0"/>
             <div class="card-body px-0 pb-2">
-              <form action="" class="mt-2 ms-3" method="POST">
+              <form  class="mt-2 ms-3" method="POST">
                 <div class="row mb-3">
                   <Label class="col-sm-2 col-form-label text-dark font-weight-bold"> Data Penduduk Id</Label>
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">PendudukID</label>
-                      <input type="text" class="form-control" name="PendudukID">
+                      <input type="text" class="form-control" name="pendudukid">
                     </div>
                   </div>
                 </div>
@@ -227,10 +235,10 @@ $getQuery = query($sql);
                   <label class="col-sm-2 col-form-label text-dark font-weight-bold">Alternatif id</label>
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
-                      <select class="form-control" id="exampleFormControlSelect1" name="alternatifId">
+                      <select class="form-control" id="exampleFormControlSelect1" name="alternatifid">
                         <?php $i = 1; ?>
                         <?php foreach($getQuery as $get) : ?>
-                        <option value="<?= $get["Alternatif id"]; ?>"><?= $get["Alternatif id"]; ?></option>
+                        <option value="<?= $get["Alternatif_id"]; ?>"><?= $get["Alternatif_id"]; ?></option>
                         <?php $i++; ?>
                         <?php endforeach; ?>
                       </select>
@@ -242,7 +250,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Penghasilan</label>
-                      <input type="text" class="form-control" name="Penghasilan">
+                      <input type="text" class="form-control" name="penghasilan">
                     </div>
                   </div>
                 </div>
@@ -251,7 +259,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Luas Rumah</label>
-                      <input type="text" class="form-control" name="luas rumah">
+                      <input type="text" class="form-control" name="luasrumah">
                     </div>
                   </div>
                 </div>
@@ -260,7 +268,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Sta. Kepemilikan rumah</label>
-                      <input type="text" class="form-control" name="Sta. Kepemilikan Rumah">
+                      <input type="text" class="form-control" name="stsrumah">
                     </div>
                   </div>
                 </div>
@@ -269,7 +277,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Sumber air</label>
-                      <input type="text" class="form-control" name="sumber air">
+                      <input type="text" class="form-control" name="sumberair">
                     </div>
                   </div>
                 </div>
@@ -278,7 +286,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Ibu Hamil / Menyusui</label>
-                      <input type="text" class="form-control" name="ibu hamil">
+                      <input type="text" class="form-control" name="ibuhamil">
                     </div>
                   </div>
                 </div>
@@ -296,7 +304,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Jml Tanggungan Anak</label>
-                      <input type="text" class="form-control" name="jml tanggungan anak">
+                      <input type="text" class="form-control" name="jmltanggungananak">
                     </div>
                   </div>
                 </div>
@@ -305,7 +313,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Jenis Dinding</label>
-                      <input type="text" class="form-control" name="jenis dinding">
+                      <input type="text" class="form-control" name="jenisdinding">
                     </div>
                   </div>
                 </div>
@@ -314,7 +322,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Jenis Lantai</label>
-                      <input type="text" class="form-control" name="jenis lantai">
+                      <input type="text" class="form-control" name="jenislantai">
                     </div>
                   </div>
                 </div>
@@ -323,7 +331,7 @@ $getQuery = query($sql);
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
                       <label class="form-label">Jenis Atap</label>
-                      <input type="text" class="form-control" name="jenis atap">
+                      <input type="text" class="form-control" name="jenisatap">
                     </div>
                   </div>
                 </div>
@@ -331,7 +339,7 @@ $getQuery = query($sql);
                   <label class="col-sm-2 col-form-label text-dark font-weight-bold">kelas keputusan</label>
                   <div class="col-sm-8">
                     <div class="input-group input-group-outline">
-                      <select class="form-control" id="exampleFormControlSelect1" name="kelas keputusan">
+                      <select class="form-control" id="exampleFormControlSelect1" name="kelaskeputusan">
                         <option value=""></option>
                         <option value="Layak (chair)">Layak (chair)</option>
                         <option value="Layak (tidak chairr)">Layak (tidak chair)</option>
@@ -354,7 +362,7 @@ $getQuery = query($sql);
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-
+    <script src="../assets/js/plugins/sweetalert.min.js"></script>
     <!-- Control Center for Material Dashboard:  -->
     <script src="../assets/js/material-dashboard.min.js?v=3.0.2"></script>
     <script>
@@ -367,3 +375,27 @@ $getQuery = query($sql);
     </script>
 </body>
 </html>
+<?php 
+// cek apakah tombol submit ditekan atau tidak
+if(isset($_POST["submit"])) {
+  echo $Luas_Rumah;
+  // cek Apakah data berhasil ditambah atau tidak
+  if (tambah($QueryTambah) > 0) {
+    echo "
+    <script>
+      swal('Bagus!', 'data Berhasil Ditambahkan!', 'success')
+      .then(() => {
+        document.location.href = '../pages/dataCriteriaPenduduk.php';
+      });
+    </script>
+    ";
+  } else {
+    echo "
+    <script>
+      swal('OOPS!', 'data Gagal ditambahkan!', 'error');
+    </script>
+    ";
+  }
+}
+
+?>

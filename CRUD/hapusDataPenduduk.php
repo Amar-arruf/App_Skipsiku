@@ -2,8 +2,10 @@
 require "../config/config.php";
 
 $id = $_GET["id"]; 
+$table = $_GET["table"];
+$attr = $_GET["Attr"];
 
-if(hapus($id) > 0 ) {
+if(hapus($id,$attr,$table) > 0 ) {
   echo "
     <script src='../assets/js/plugins/sweetalert.min.js'></script>
     <script>

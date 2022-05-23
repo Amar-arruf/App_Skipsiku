@@ -216,7 +216,7 @@
                 </div>
                 <div class="card-body px-0 pb-2">
                   <!-- Tombol Tambah -->
-                  <a href="" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
+                  <a href="../CRUD/tambahDataCriteriaPenduduk.php" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
                   <div class="table-responsive p-0">
                     <table class="table align-intems-center mb-0">
                       <thead>
@@ -283,10 +283,10 @@
                             <p class="text-xs font-weight-bold mb-0"><?= $row["Kelas Keputusan"]; ?></p>
                           </td>
                           <td class="align-middle text-center text-sm">
-                            <a href="" class="btn btn-info btn-sm mb-0">
+                            <a href="../CRUD/ubahDataCriteriaPenduduk.php?id=<?= $row["Data Pendudukid"]?>" class="btn btn-info btn-sm mb-0">
                               Ubah 
                             </a>
-                            <a href=""  class="btn btn-primary btn-sm mb-0">
+                            <a href="../CRUD/hapusDataCriteriaPenduduk.php?id=<?= $row["Data Pendudukid"]?>&table=data_penduduk_value&Attr=Data Pendudukid"  class="btn btn-primary btn-sm mb-0">
                               Hapus
                             </a>
                           </td>

@@ -3,12 +3,25 @@ error_reporting(E_ALL ^ E_WARNING|| E_NOTICE);
 require '../config/config.php';
 // mengambil data Dari Form
 require '../config/getDataForm.php';
+// ambil data di Url
+$id = $_GET["id"];
 
-// ambil data / get Query
-$QueryTambah = "INSERT INTO `data penduduk` 
-                VALUES 
-                ('$alternatifID','$userID','$Nama','$ttl','$Jk','$alamat',current_timestamp(), NULL)
-               ";
+$dat = query("SELECT * FROM `data_penduduk_value` WHERE `Data Pendudukid` = '$id'")[0];
+
+$QueryUbah = "UPDATE `data_penduduk_value` SET 
+                `Penghasilan` = '$Penghasilan',
+                `Luas Rumah`= '$luasrumah',
+                `Sta. Kepemilikan rumah` = '$stsrumah',
+                `Sumber air` = '$sumberair',
+                `Ibu Hamil / Menyusui` = '$ibuhamil',
+                `Lansia` = '$lansia',
+                `Jml Tanggungan Anak` = '$jml_tanggungan_anak',
+                `Jenis Dinding` = '$jenis_dinding',
+                `Jenis Lantai` = '$jenis_lantai',
+                `Jenis Atap` = '$jenis_atap',
+                `Kelas Keputusan` = '$kelas_keputusan'
+                 WHERE `Data Pendudukid` = '$id'"
+              ;
 
 ?>
 
@@ -16,22 +29,21 @@ $QueryTambah = "INSERT INTO `data penduduk`
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link
-      rel="apple-touch-icon"
+  <link 
+      rel="apple-touch-icon" 
       sizes="76x76"
       href="../assets/img/apple-icon.png"
   />
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+  <link rel="icon" type="image/png" href="../assets//img/favicon.png" />
   <!-- font and icons -->
   <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
       rel="stylesheet"
   />
-  <link rel="stylesheet" href="../assets/css/nucleo-icons.css" />
-  <link rel="stylesheet" href="../assets/css/nucleo-svg.css" />
-  <!-- font Awesome Icons -->
-  <script
+   <!-- font Awesome Icons -->
+   <script
     src="https://kit.fontawesome.com/17bdaf7867.js"
     crossorigin="anonymous"
   ></script>
@@ -40,35 +52,38 @@ $QueryTambah = "INSERT INTO `data penduduk`
     href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
     rel="stylesheet"
   />
-  <!-- CSS Files -->
-  <link
+   <!-- CSS Files -->
+   <link
     id="pagestyle"
     href="../assets/css/material-dashboard.css?v=3.0.2"
     rel="stylesheet"
   />
-  <title>Halaman Dashboard | Tambah Data Pendduduk</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Halaman Dashboard | Ubah Data Criteria Penduduk</title>
 </head>
-<body class="g-sidenav-show bg-gray-300">
+<body class="g-sidenav-show bg-gray-300 g-sidenav-pinned">
   <!-- menu dashboard -->
   <aside 
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark"
     id="sidenav-main"
   >
     <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
-      aria-hidden="true"
-      id="iconSidenav"></i>
+      <i
+        class="fas fa ti-mes p-3 cursor-pointer text-white opacity-pointer opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+        aria-hidden="true"
+        id="iconSidenav"
+      ></i>
       <a 
         class="navbar-brand m-0"
-        href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard "
+        href="https://demos.creative-tim.com/material-dashboard/pages/dashboard "
         target="_blank"
       >
-        <img 
+        <img
           src="../assets/img/logo-ct.png"
           class="navbar-brand-img h-100"
           alt="main_logo"
-          >
-          <span class="ms-1 font-weight-bold text-white">PKH BANSOS</span>
+        />
+        <span class="ms-1 font-weight-bold text-white">PKH BANSOS</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2"/>
@@ -85,7 +100,7 @@ $QueryTambah = "INSERT INTO `data penduduk`
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="../pages/dataPenduduk.php">
+          <a class="nav-link text-white" href="">
             <div
               class="text-white text-center me-2 d-flex align-items-center justify-content-center"
             >
@@ -95,7 +110,7 @@ $QueryTambah = "INSERT INTO `data penduduk`
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="">
+          <a class="nav-link text-white active bg-gradient-primary" href="">
             <div
               class="text-white text-center me-2 d-flex align-items-center justify-content-center"
             >
@@ -138,11 +153,9 @@ $QueryTambah = "INSERT INTO `data penduduk`
     </div>
   </aside>
   <!-- Akhir menu dashboard -->
-  <main
-    class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
-  >
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
     <!-- Navbar -->
-    <nav
+  <nav
       class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
       id="navbarBlur"
       navbar-scroll="true"
@@ -159,10 +172,10 @@ $QueryTambah = "INSERT INTO `data penduduk`
               class="breadcrumb-item text-sm text-dark active"
               aria-current="page"
             >
-              Data Penduduk
+              Data Criteria Penduduk
             </li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Data Penduduk</h6>
+          <h6 class="font-weight-bolder mb-0">Data Criteria Penduduk</h6>
         </nav>
         <div
           class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 justify-content-end align-items-center"
@@ -178,7 +191,7 @@ $QueryTambah = "INSERT INTO `data penduduk`
                 <span class="d-sm-inline d-none">Account Name</span>
               </a>
             </li>
-            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center" id=humbugerMenu>
               <a
                 href="javascript:;"
                 class="nav-link text-body p-0"
@@ -204,69 +217,123 @@ $QueryTambah = "INSERT INTO `data penduduk`
     </nav>
     <!-- Akhir Navbar -->
     <div class="container-fluid py-4">
-      <!-- Form Tambah -->
+      <!-- Form Ubah Data  -->
       <div class="row">
         <div class="col-12">
           <div class="card my-4">
             <div class="card-header p-0 mx-3 mb-0">
-              <h5 class="text-dark text-capitalize ps-3 my-3">Tambah Data Penduduk</h5>
+              <h5 class="text-dark text-capitalize ps-3 my-3">Ubah Data Criteria Penduduk</h5>
             </div>
             <hr class="my-0"/>
             <div class="card-body px-0 pb-2">
-              <form action="" class="mt-2 ms-3" method="POST">
+              <form  class="mt-2 ms-3" method="POST">
                 <div class="row mb-3">
-                  <label for="alternatifID" class="col-sm-2 col-form-label text-dark font-weight-bold">Alternatif ID</label>
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold"> Data Penduduk Id</Label>
                   <div class="col-sm-8">
-                    <div class="input-group input-group-outline">
-                      <label class="form-label">Alternatif ID</label>
-                      <input type="text" class="form-control" name="alternatifID">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="pendudukid" readonly value="<?= $dat['Data Pendudukid']; ?>"/>
                     </div>
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="userID" class="col-sm-2 col-form-label text-dark font-weight-bold">user ID</label>
+                  <label class="col-sm-2 col-form-label text-dark font-weight-bold">Alternatif id</label>
                   <div class="col-sm-8">
-                    <div class="input-group input-group-static">
-                      <label class="form-label"></label>
-                      <input type="text" class="form-control" readonly value="A1" name="userID">
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="alternatifID" class="col-sm-2 col-form-label text-dark font-weight-bold">nama</label>
-                  <div class="col-sm-8">
-                    <div class="input-group input-group-outline">
-                      <label class="form-label">nama</label>
-                      <input type="text" class="form-control" name="nama">
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="alternatifID" class="col-sm-2 col-form-label text-dark font-weight-bold">Tanggal Lahir</label>
-                  <div class="col-sm-8">
-                    <div class="input-group input-group-outline">
-                      <label class="form-label">Tanggal Lahir</label>
-                      <input type="text" class="form-control" name="ttl">
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="jenisKelamin" class="col-sm-2 col-form-label text-dark font-weight-bold">Jenis Kelamin</label>
-                  <div class="col-sm-8">
-                    <div class="input-group input-group-outline">
-                      <label for="exampleFormControlSelect1" class="ms-0"></label>
-                      <select class="form-control" id="exampleFormControlSelect1" name="JK">
-                        <option value="Laki-Laki">Laki - Laki</option>
-                        <option value="Perempuan">Perempuan</option>
+                    <div class="input-group input-group-dynamic">
+                      <select class="form-control" id="exampleFormControlSelect1" name="alternatifid">
+                        <option value="<?= $dat["Alternatif id"]; ?>"><?= $dat["Alternatif id"]; ?></option>
                       </select>
                     </div>
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="jenisKelamin" class="col-sm-2 col-form-label text-dark font-weight-bold">Alamat</label>
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Penghasilan</Label>
                   <div class="col-sm-8">
-                    <div class="input-group input-group-outline">
-                      <textarea class="form-control" rows="4" placeholder="Alamat" spellcheck="false" name="alamat"></textarea>
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="penghasilan" value="<?= $dat['Penghasilan']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Luas Rumah</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="luasrumah" value="<?= $dat['Luas Rumah']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Sts. Kepemilikan rumah</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="stsrumah" value="<?= $dat['Sta. Kepemilikan rumah']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Sumber Air</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="sumberair" value="<?= $dat['Sumber air']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Ibu Hamil / Menyusui</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="ibuhamil" value="<?= $dat['Ibu Hamil / Menyusui']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Lansia</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="lansia" value="<?= $dat['Lansia']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Jml Tanggungan Anak</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="jmltanggungananak" value="<?= $dat['Jml Tanggungan Anak']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Jenis Dinding</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="jenisdinding" value="<?= $dat['Jenis Dinding']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Jenis Lantai</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="jenislantai" value="<?= $dat['Jenis Lantai']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <Label class="col-sm-2 col-form-label text-dark font-weight-bold">Jenis Atap</Label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <input type="text" class="form-control" name="jenisatap" value="<?= $dat['Jenis Atap']; ?>">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label text-dark font-weight-bold">kelas keputusan</label>
+                  <div class="col-sm-8">
+                    <div class="input-group input-group-dynamic">
+                      <select class="form-control" id="exampleFormControlSelect1" name="kelaskeputusan">
+                        <option value="<?= $dat['Kelas Keputusan']; ?>"><?= $dat['Kelas Keputusan']; ?></option>
+                        <option value="Layak (chair)">Layak (chair)</option>
+                        <option value="Layak (tidak chairr)">Layak (tidak chair)</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -276,8 +343,8 @@ $QueryTambah = "INSERT INTO `data penduduk`
           </div>
         </div>
       </div>
+      <!-- Akhir Form Tambah -->
     </div>
-    <!-- Akhir form Tambah -->
   </main>
 
   <!--   Core JS Files   -->
@@ -295,19 +362,19 @@ $QueryTambah = "INSERT INTO `data penduduk`
 // cek apakah tombol submit ditekan atau tidak
 if(isset($_POST["submit"])) {
   // cek Apakah data berhasil ditambah atau tidak
-  if (tambah($QueryTambah) > 0) {
+  if (ubah($QueryUbah) > 0) {
     echo "
     <script>
-      swal('Bagus!', 'data Berhasil Ditambahkan!', 'success')
+      swal('Bagus!', 'data Berhasil Diubah!', 'success')
       .then(() => {
-        document.location.href = '../pages/dataPenduduk.php';
+        document.location.href = '../pages/dataCriteriaPenduduk.php';
       });
     </script>
     ";
   } else {
     echo "
     <script>
-      swal('OOPS!', 'data Gagal ditambahkan!', 'error');
+      swal('OOPS!', 'data Gagal diubah!', 'error');
     </script>
     ";
   }

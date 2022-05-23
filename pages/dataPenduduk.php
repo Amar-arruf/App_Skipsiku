@@ -252,7 +252,7 @@
                           <a href="../CRUD/ubahDataPenduduk.php?id=<?= $row["Alternatif_id"]; ?>" class="btn btn-info btn-sm mb-0">
                             Ubah 
                           </a>
-                          <a href="../CRUD/hapus.php?id=<?= $row["Alternatif_id"]; ?>"  class="btn btn-primary btn-sm mb-0">
+                          <a href="../CRUD/hapusDataPenduduk.php.php?id=<?= $row["Alternatif_id"];?>&table=data penduduk&Attr=Alternatif_id"  class="btn btn-primary btn-sm mb-0">
                             Hapus
                           </a>
                         </td>
