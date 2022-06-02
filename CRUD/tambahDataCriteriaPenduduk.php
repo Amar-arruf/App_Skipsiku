@@ -21,8 +21,8 @@ $QueryTambah = "INSERT INTO `data_penduduk_value`
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta 
-    name="viewport" 
-    content="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" 
+    name="viewport"  
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" 
   />
   <link
       rel="apple-touch-icon"
@@ -378,7 +378,6 @@ $QueryTambah = "INSERT INTO `data_penduduk_value`
 <?php 
 // cek apakah tombol submit ditekan atau tidak
 if(isset($_POST["submit"])) {
-  echo $Luas_Rumah;
   // cek Apakah data berhasil ditambah atau tidak
   if (tambah($QueryTambah) > 0) {
     echo "
