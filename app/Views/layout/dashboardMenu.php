@@ -1,3 +1,4 @@
+<?php $uri = new \CodeIgniter\HTTP\URI(base_url(uri_string(true))); ?>
 <aside
       class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark"
       id="sidenav-main"
@@ -25,7 +26,7 @@
       <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-white active bg-gradient-primary" href="">
+            <a class="nav-link text-white <?= $uri->getSegment('1') == 'dashboard' ? "active bg-gradient-primary": "";?>">
               <div
                 class="text-white text-center me-2 d-flex align-items-center justify-content-center"
               >
@@ -35,7 +36,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="<?= base_url('') ?>" >
+            <a class="nav-link text-white <?= $uri->getSegment('1') == 'datapenduduk' ? "active bg-gradient-primary": "";?>" href="<?= base_url('datapenduduk') ?>" >
               <div
                 class="text-white text-center me-2 d-flex align-items-center justify-content-center"
               >
@@ -45,13 +46,23 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="<?= base_url('') ?>">
+            <a class="nav-link text-white <?= $uri->getSegment('1') == 'datacriteriapenduduk' ? "active bg-gradient-primary": "";?>" href="<?= base_url('datacriteriapenduduk') ?>">
               <div
                 class="text-white text-center me-2 d-flex align-items-center justify-content-center"
               >
                 <i class="fa-solid fa-table fa-lg"></i>
               </div>
               <span class="nav-link-text ms-1">Data Criteria</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white <?= $uri->getSegment('1')  == 'datacriteriaatribut' ? "active bg-gradient-primary": "";?>" href="<?= base_url('datacriteriaatribut') ?>">
+              <div
+                class="text-white text-center me-2 d-flex align-items-center justify-content-center"
+              >
+                <i class="fa-solid fa-table fa-lg"></i>
+              </div>
+              <span class="nav-link-text ms-1">Data Criteria Atribut</span>
             </a>
           </li>
           <li class="nav-item">

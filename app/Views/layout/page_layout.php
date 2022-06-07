@@ -30,7 +30,7 @@
     href="<?= base_url('assets/css/material-dashboard.css?v=3.0.2') ?>"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('/assets/css/style.css') ?>">
   <title>Halaman Dashboard | PKH C.45 dengan K - Means</title>
 </head>
 <body class="g-sidenav-show bg-gray-300 g-sidenav-pinned">
@@ -54,5 +54,13 @@
 
     <!-- Control Center for Material Dashboard:  -->
     <script src="<?= base_url('assets/js/material-dashboard.min.js?v=3.0.2') ?>"></script>
+    <script>
+      var Main = document.getElementsByClassName("main-content")[0];
+      var humbergerMenu = document.getElementById("humbugerMenu");
+
+      humbergerMenu.addEventListener("click", () => {
+        Main.classList.toggle("notactive");
+      })
+    </script>
 </body>
 </html>

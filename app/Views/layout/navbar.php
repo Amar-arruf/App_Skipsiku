@@ -16,10 +16,10 @@
                 class="breadcrumb-item text-sm text-dark active"
                 aria-current="page"
               >
-                Dashboard
+                <?= $active; ?>
               </li>
             </ol>
-            <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+            <h6 class="font-weight-bolder mb-0"><?= $active; ?></h6>
           </nav>
           <div
             class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 justify-content-end align-items-center"
@@ -35,7 +35,7 @@
                   <span class="d-sm-inline d-none">Account Name</span>
                 </a>
               </li>
-              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <li class="nav-item d-xl-none ps-3 d-flex align-items-center" id="humbugerMenu">
                 <a
                   href="javascript:;"
                   class="nav-link text-body p-0"
