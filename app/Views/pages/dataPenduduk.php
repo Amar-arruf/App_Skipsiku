@@ -13,7 +13,7 @@
         </div>
         <div class="card-body px-0 pb-2">
           <!-- Tombol Tambah -->
-          <a href="" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
+          <a href="<?= base_url('datapenduduk/data/new') ?>" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
           <div class="table-responsive p-0">
             <table class="table align-intems-center mb-0">
               <thead>
@@ -48,10 +48,10 @@
                     <p class="text-xs font-weight-bold mb-0"><?= substr($row["Alamat"],0,49); ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <a href="" class="btn btn-info btn-sm mb-0">
+                    <a href="<?= base_url('datapenduduk/data/'.$row['Alternatif_id'].'/edit') ?>" class="btn btn-info btn-sm mb-0">
                       Ubah 
                     </a>
-                    <a href=""  class="btn btn-primary btn-sm mb-0">
+                    <a href="<?= base_url('datapenduduk/data/'.$row['Alternatif_id'].'/delete') ?>"  class="btn btn-primary btn-sm mb-0 btn-hapus" >
                       Hapus
                     </a>
                   </td>
@@ -66,5 +66,37 @@
     </div>
   </div>
 </div>
+
+<script src="<?= base_url('assets/js/plugins/sweetalert.min.js') ?>"></script>
+
+<script>
+  var btnDelete = document.getElementsByClassName("btn-hapus");
+
+  for (let i = 0; i < btnDelete.length; i++) {
+    btnDelete[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    var link = btnDelete[i].getAttribute("href");
+    
+    swal({
+      title: "Apakah kamu yakin?",
+      text: "ketika data ini di Hapus, Maka file Akan Terhapus Selamanya!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("data berhasil Dihapus", {
+          icon: "success",
+        }).then((value) => {
+          document.location = link;
+        });
+      }
+    });
+    
+    });
+    
+  }
+</script>
 
 <?= $this->endSection() ?>

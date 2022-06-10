@@ -1,0 +1,261 @@
+CRITICAL - 2022-06-08 08:50:20 --> Undefined variable $active
+in APPPATH\Views\layout\navbar.php on line 19.
+ 1 APPPATH\Views\layout\navbar.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\layout\\navbar.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 5 APPPATH\Views\layout\page_layout.php(42): CodeIgniter\View\View->include('layout/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\page_layout.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/page_layout', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('CRUD/tambahDataPenduduk', [], true)
+10 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): view('CRUD/tambahDataPenduduk')
+11 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+12 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 08:51:19 --> Undefined variable $active
+in APPPATH\Views\layout\navbar.php on line 19.
+ 1 APPPATH\Views\layout\navbar.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\layout\\navbar.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 5 APPPATH\Views\layout\page_layout.php(42): CodeIgniter\View\View->include('layout/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\page_layout.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/page_layout', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('CRUD/tambahDataPenduduk', [], true)
+10 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): view('CRUD/tambahDataPenduduk')
+11 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+12 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-08 20:27:06 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-06-08 20:27:06 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penduduk`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PeopleModel.php(27): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Page.php(17): App\Models\PeopleModel->getData()
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Page->datapenduduk()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 20:36:23 --> Call to undefined function tambah()
+in APPPATH\Views\CRUD\tambahDataPenduduk.php on line 87.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('CRUD/tambahDataPenduduk', [], true)
+ 4 APPPATH\Controllers\ManipulasiDataPenduduk.php(70): view('CRUD/tambahDataPenduduk')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 21:50:22 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:13:22 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:18:25 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:22:24 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:22:27 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:45:01 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:00 --> Call to a member function getPostget() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:01 --> Call to a member function getPostget() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:01 --> Call to a member function getPostget() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:01 --> Call to a member function getPostget() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:01 --> Call to a member function getPostget() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:02 --> Call to a member function getPostget() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:02 --> Call to a member function getPostget() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:47:49 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:48:06 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:48:07 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:48:17 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:19 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:20 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:21 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:21 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:21 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:22 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:22 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-08 22:49:22 --> Call to a member function getPost() on null
+in APPPATH\Models\PeopleModel.php on line 33.
+ 1 APPPATH\Controllers\ManipulasiDataPenduduk.php(68): App\Models\PeopleModel->create()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPenduduk->create()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPenduduk))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

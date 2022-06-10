@@ -15,7 +15,7 @@
           target="_blank"
         >
           <img
-            src="./assets/img/logo-ct.png"
+            src="<?= base_url('assets/img/logo-ct.png') ?>" 
             class="navbar-brand-img h-100"
             alt="main_logo"
           />
@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse w-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-white <?= $uri->getSegment('1') == 'dashboard' ? "active bg-gradient-primary": "";?>">
+            <a class="nav-link text-white <?= $uri->getSegment('1') == 'dashboard' ? "active bg-gradient-primary": "";?>" href="<?= base_url('dashboard')?>">
               <div
                 class="text-white text-center me-2 d-flex align-items-center justify-content-center"
               >

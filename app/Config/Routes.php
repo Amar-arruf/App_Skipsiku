@@ -41,6 +41,12 @@ $routes->get('/datapenduduk', 'Page::datapenduduk');
 $routes->get('/datacriteriapenduduk', 'Page::datacriteriapenduduk');
 $routes->get('/datacriteriaatribut', 'Page::datacriteriatribut');
 
+$routes->group('datapenduduk', function($routes){
+    $routes->add('data/new', 'ManipulasiDataPenduduk::create');
+    $routes->add('data/(:segment)/edit', 'ManipulasiDataPenduduk::edit/$1');
+    $routes->add('data/(:segment)/delete', 'ManipulasiDataPenduduk::delete/$1');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
