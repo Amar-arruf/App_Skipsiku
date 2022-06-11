@@ -2,7 +2,10 @@
 
 <?= $this->section('content') ?>
 
+<?php $session = \Config\Services::session(); ?>
+
 <div class="container-fluid py-4">
+  <div id="flash" data-flash="<?= $session->getFlashdata('successs') ?>"></div>
   <div class="row">
     <div class="col-12">
       <div class="card my-4">
@@ -67,35 +70,16 @@
   </div>
 </div>
 
-<script src="<?= base_url('assets/js/plugins/sweetalert.min.js') ?>"></script>
-
 <script>
-  var btnDelete = document.getElementsByClassName("btn-hapus");
+  var flash = document.getElementById('flash');
+  var data = flash.getAttribute('data-flash');
 
-  for (let i = 0; i < btnDelete.length; i++) {
-    btnDelete[i].addEventListener("click", (e) => {
-    e.preventDefault();
-    var link = btnDelete[i].getAttribute("href");
-    
+  if (data) {
     swal({
-      title: "Apakah kamu yakin?",
-      text: "ketika data ini di Hapus, Maka file Akan Terhapus Selamanya!",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    })
-    .then((willDelete) => {
-      if (willDelete) {
-        swal("data berhasil Dihapus", {
-          icon: "success",
-        }).then((value) => {
-          document.location = link;
-        });
-      }
+      title: "Good job!",
+      text:  data,
+      icon: "success",
     });
-    
-    });
-    
   }
 </script>
 

@@ -4,8 +4,6 @@ namespace App\Controllers;
 
 use App\Models\PeopleModel;
 
-use CodeIgniter\Exceptions\PageNotFoundException;
-
 class ManipulasiDataPenduduk extends BaseController
 {
   public function create()
@@ -56,7 +54,12 @@ class ManipulasiDataPenduduk extends BaseController
       // instance Object
       $model = new PeopleModel();
       $model->create();
-      return redirect()->to('/datapenduduk');
+
+      if ($model->affectedRows() > 0 ) {
+        $session = \Config\Services::session();
+        $session->setFlashdata('successs', 'data berhasil disimpan');
+        return redirect()->to('/datapenduduk');
+      }
     }
 
     // tampilkan form create
@@ -103,7 +106,12 @@ class ManipulasiDataPenduduk extends BaseController
       // instance Object
       $model = new PeopleModel();
       $model->edit($id);
-      return redirect()->to('/datapenduduk');
+
+      if ($model->affectedRows() > 0 ) {
+        $session = \Config\Services::session();
+        $session->setFlashdata('successs', 'data berhasil disimpan');
+        return redirect()->to('/datapenduduk');
+      }
     }
 
     // tampilkan form edit
@@ -114,7 +122,7 @@ class ManipulasiDataPenduduk extends BaseController
   {
     // instance Object
     $model = new PeopleModel();
-    $model->Where('Alternatif_id', $id)->delete();
+    $model->delete($id);
     return redirect()->to('/datapenduduk');
   }
 

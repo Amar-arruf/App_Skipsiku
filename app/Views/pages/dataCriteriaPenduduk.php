@@ -2,7 +2,10 @@
 
 <?= $this->section('content') ?>
 
+<?php $session = \Config\Services::session(); ?>
+
 <div class="container-fluid py-4">
+  <div id="flash" data-flash="<?= $session->getFlashdata('successs')?>"></div>
   <div class="row">
     <div class="col-12">
       <div class="card my-4">
@@ -13,7 +16,7 @@
         </div>
         <div class="card-body px-0 pb-2">
           <!-- Tombol Tambah -->
-          <a href="../CRUD/tambahDataCriteriaPenduduk.php" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
+          <a href="<?= base_url('datacriteriapenduduk/data/new')?>" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
           <div class="table-responsive p-0">
             <table class="table align-intems-center mb-0">
               <thead>
@@ -40,50 +43,50 @@
                 <tr>
                   <td>
                     <div class=" px-2 py-1">
-                      <h6 class="mb-0 text-sm"><?= $row["Data Pendudukid"]; ?></h6>
+                      <h6 class="mb-0 text-sm"><?= $row["Data_Pendudukid"]; ?></h6>
                     </div>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Alternatif id"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Alternatif_id"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
                     <p class="text-xs font-weight-bold mb-0"><?= $row["Penghasilan"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Luas Rumah"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Luas_Rumah"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Sta. Kepemilikan rumah"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Sts_Rumah"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Sumber air"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Sumber_air"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Ibu Hamil / Menyusui"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Ibu_Hamil_/_Menyusui"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
                     <p class="text-xs font-weight-bold mb-0"><?= $row["Lansia"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jml Tanggungan Anak"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jml_Tanggungan_Anak"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jenis Dinding"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jenis_Dinding"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jenis Lantai"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jenis_Lantai"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jenis Atap"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Jenis_Atap"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["Kelas Keputusan"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["Kelas_Keputusan"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <a href="../CRUD/ubahDataCriteriaPenduduk.php?id=<?= $row["Data Pendudukid"]?>" class="btn btn-info btn-sm mb-0">
+                    <a href="<?= base_url('datacriteriapenduduk/data/'.$row["Data_Pendudukid"].'/edit')?>" class="btn btn-info btn-sm mb-0">
                       Ubah 
                     </a>
-                    <a href="../CRUD/hapusDataCriteriaPenduduk.php?id=<?= $row["Data Pendudukid"]?>&table=data_penduduk_value&Attr=Data Pendudukid"  class="btn btn-primary btn-sm mb-0">
+                    <a href="<?= base_url('datacriteriapenduduk/data/'.$row["Data_Pendudukid"].'/delete')?>"  class="btn btn-primary btn-sm mb-0 btn-hapus">
                       Hapus
                     </a>
                   </td>
@@ -98,5 +101,18 @@
     </div>
   </div>
 </div>
+
+<script>
+  var flash = document.getElementById('flash');
+  var data = flash.getAttribute('data-flash');
+
+  if (data) {
+    swal({
+      title: "Good job!",
+      text:  data,
+      icon: "success",
+    });
+  }
+</script>
 
 <?= $this->endSection() ?>

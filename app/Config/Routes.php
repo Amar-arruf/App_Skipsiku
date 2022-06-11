@@ -40,11 +40,29 @@ $routes->get('/dashboard', 'Home::index');
 $routes->get('/datapenduduk', 'Page::datapenduduk');
 $routes->get('/datacriteriapenduduk', 'Page::datacriteriapenduduk');
 $routes->get('/datacriteriaatribut', 'Page::datacriteriatribut');
-
+$routes->get('/prosesmetodec45', 'Proses::metodec45');
+$routes->get('/prosesmetodekmeans', 'Proses::metodekmeans');
+;
 $routes->group('datapenduduk', function($routes){
     $routes->add('data/new', 'ManipulasiDataPenduduk::create');
     $routes->add('data/(:segment)/edit', 'ManipulasiDataPenduduk::edit/$1');
     $routes->add('data/(:segment)/delete', 'ManipulasiDataPenduduk::delete/$1');
+});
+
+$routes->group('datacriteriapenduduk', function($routes){
+    $routes->add('data/new', 'ManipulasiDataPendudukValue::create');
+    $routes->add('data/(:segment)/edit', 'ManipulasiDataPendudukValue::edit/$1');
+    $routes->add('data/(:segment)/delete', 'ManipulasiDataPendudukValue::delete/$1');
+});
+
+$routes->group('datacriteriaatribut', function($routes){
+    $routes->add('data/new', 'ManipulasiDataCriteriaAtribut::create');
+    $routes->add('data/(:segment)/edit', 'ManipulasiCriteriaAtribut::edit/$1');
+    $routes->add('data/(:segment)/delete', 'ManipulasiCriteriaAtribut::delete/$1');
+
+    $routes->add('dataoption/new', 'ManipulasiDataCriteriaAtributOption::create');
+    $routes->add('dataoption/(:segment)/edit', 'ManipulasiCriteriaAtributOption::edit/$1');
+    $routes->add('dataoption/(:segment)/delete', 'ManipulasiCriteriaAtributOption::delete/$1');
 });
 
 /*

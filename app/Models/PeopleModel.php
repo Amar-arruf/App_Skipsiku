@@ -7,10 +7,10 @@ use CodeIgniter\Model;
 class PeopleModel extends Model 
 {
     protected $table      = 'penduduk';
-    protected $primaryLey = 'Alternatif_id';
+    protected $primaryKey = 'Alternatif_id';
 
     protected $createdField  = 'dibuat';
-    protected $updatedField  = 'diupdate';
+    protected $updatedField = 'diupdate';
 
     protected $allowedFields = [
        'Alternatif_id','user_id', 'name', 'Tanggal_Lahir', 'Jenis_Kelamin', 'Alamat', 'dibuat', 'diupdate'
@@ -40,10 +40,9 @@ class PeopleModel extends Model
         'name' => $_POST['nama'],
         'Tanggal_Lahir' => $_POST['ttl'],
         'Jenis_Kelamin' => $_POST['JK'],
-        'Alamat' => $_POST['alamat'],
+        'Alamat' => $_POST['alamat']
       ];
-
-      $this->Where('Alternatif_id', $id)->set($data)->update();
+      $this->update($id,$data );
     }
 
 }

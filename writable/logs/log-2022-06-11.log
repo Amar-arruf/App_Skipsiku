@@ -1,0 +1,36 @@
+CRITICAL - 2022-06-11 00:05:21 --> Undefined variable $dat
+in APPPATH\Views\CRUD\ubahDataCriteriaPenduduk.php on line 20.
+ 1 APPPATH\Views\CRUD\ubahDataCriteriaPenduduk.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dat', 'APPPATH\\Views\\CRUD\\ubahDataCriteriaPenduduk.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\CRUD\\ubahDataCriteriaPenduduk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('CRUD/ubahDataCriteriaPenduduk', [], true)
+ 5 APPPATH\Controllers\ManipulasiDataPendudukValue.php(218): view('CRUD/ubahDataCriteriaPenduduk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPendudukValue->edit('D2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPendudukValue))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-11 00:13:10 --> Undefined variable $gett
+in APPPATH\Views\CRUD\ubahDataCriteriaPenduduk.php on line 70.
+ 1 APPPATH\Views\CRUD\ubahDataCriteriaPenduduk.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gett', 'APPPATH\\Views\\CRUD\\ubahDataCriteriaPenduduk.php', 70)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\CRUD\\ubahDataCriteriaPenduduk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('CRUD/ubahDataCriteriaPenduduk', [], true)
+ 5 APPPATH\Controllers\ManipulasiDataPendudukValue.php(218): view('CRUD/ubahDataCriteriaPenduduk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPendudukValue->edit('D2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPendudukValue))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-11 00:13:37 --> Undefined variable $gett
+in APPPATH\Views\CRUD\ubahDataCriteriaPenduduk.php on line 102.
+ 1 APPPATH\Views\CRUD\ubahDataCriteriaPenduduk.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gett', 'APPPATH\\Views\\CRUD\\ubahDataCriteriaPenduduk.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\CRUD\\ubahDataCriteriaPenduduk.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('CRUD/ubahDataCriteriaPenduduk', [], true)
+ 5 APPPATH\Controllers\ManipulasiDataPendudukValue.php(218): view('CRUD/ubahDataCriteriaPenduduk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\ManipulasiDataPendudukValue->edit('D2')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManipulasiDataPendudukValue))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

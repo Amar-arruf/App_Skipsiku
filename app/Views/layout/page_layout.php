@@ -24,6 +24,8 @@
     href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
     rel="stylesheet"
   />
+  <!-- sweetalert -->
+  <script src="<?= base_url('assets/js/plugins/sweetalert.min.js') ?>"></script>
   <!-- CSS Files -->
   <link
     id="pagestyle"
@@ -52,6 +54,7 @@
   <script src="<?= base_url('assets/js/core/bootstrap.min.js') ?>"></script>
   <script src="<?= base_url('assets/js/plugins/perfect-scrollbar.min.js') ?>"></script>
   <script src="<?= base_url('assets/js/plugins/perfect-scrollbar.min.js') ?>"></script>
+  
 
     <!-- Control Center for Material Dashboard:  -->
     <script src="<?= base_url('assets/js/material-dashboard.min.js?v=3.0.2') ?>"></script>
@@ -63,5 +66,34 @@
         Main.classList.toggle("notactive");
       })
     </script>
+  <script>
+    var btnDelete = document.getElementsByClassName("btn-hapus");
+
+    for (let i = 0; i < btnDelete.length; i++) {
+      btnDelete[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      var link = btnDelete[i].getAttribute("href");
+      
+      swal({
+        title: "Apakah kamu yakin?",
+        text: "ketika data ini di Hapus, Maka file Akan Terhapus Selamanya!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("data berhasil Dihapus", {
+            icon: "success",
+          }).then((value) => {
+            document.location = link;
+          });
+        }
+      });
+      
+      });
+      
+    }
+  </script>
 </body>
 </html>
