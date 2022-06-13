@@ -26,6 +26,7 @@ class Page extends BaseController
     $model = model(CriteriaAtributModel::class);
     $record = [
       'get' => $model->getData()
+      
     ];
     
     echo view('pages/dataCriteriaAtribut', $record);

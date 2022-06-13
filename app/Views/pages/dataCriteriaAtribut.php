@@ -4,7 +4,10 @@
 
 <?php $CriteriaOptionAtributModel = model(CriteriaOptionAtributModel::class) ?>
 
+<?php $session = \Config\Services::session(); ?>
+
 <div class="container-fluid py-4">
+  <div id="flash" data-flash="<?= $session->getFlashdata('successs') ?>"></div>
   <div class="row mb-4">
     <div class="col-12">
       <div class="card my-4">
@@ -15,7 +18,7 @@
         </div>
         <div class="card-body px-0 pb-2">
           <!-- Tambol Tambah -->
-          <a href="../CRUD/tambahDataCriteriaAtribut.php" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
+          <a href="<?= base_url('datacriteriaatribut/data/new') ?>" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
           <div class="table-responsive p-0">
             <table class="table align-items-center mb-0">
               <thead>
@@ -46,10 +49,10 @@
                     <p class="text-xs font-weight-bold mb-0"><?= $row["type"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <a href="../CRUD/ubahDataCriteriaAtribut.php?id=<?= $row["criteria_id"]; ?>" class="btn btn-info btn-sm mb-0">
+                    <a href="<?= base_url('datacriteriaatribut/data/'.$row["criteria_id"].'/edit') ?>"  class="btn btn-info btn-sm mb-0">
                       Ubah
                     </a>
-                    <a href="../CRUD/hapusDataCriteriaAtribut.php?id=<?= $row["criteria_id"]; ?>&table=criteias&Attr=criteria_id" class="btn btn-primary btn-sm mb-0">
+                    <a href="<?= base_url('datacriteriaatribut/data/'.$row["criteria_id"].'/delete') ?>" class="btn btn-primary btn-sm mb-0 btn-hapus">
                       Hapus
                     </a>
                   </td>
@@ -76,7 +79,7 @@
         </div>
         <div class="card-body px-0 pb-2">
           <!-- Tambol Tambah -->
-          <a href="../CRUD/tambahDataCriteriaValue.php?id=<?= $Row["criteria_id"] ?>" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
+          <a href="<?= base_url('datacriteriaatribut/dataoption/'.$Row['criteria_id'].'/new') ?>"  class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
           <div class="table-responsive p-0">
             <table class="table align-items-center mb-0">
               <thead>
@@ -111,10 +114,10 @@
                     <p class="text-xs font-weight-bold mb-0"><?= $row["value"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <a href="../CRUD/ubahCriteriaValue.php?id=<?= $row["criteria_option_id"]; ?>"  class="btn btn-info btn-sm mb-0">
+                    <a href="<?= base_url('datacriteriaatribut/dataoption/'.$row["criteria_option_id"].'/edit') ?>"   class="btn btn-info btn-sm mb-0">
                       Ubah
                     </a>
-                    <a href="../CRUD/hapusDataCriteriaValue.php?id=<?= $row["criteria_option_id"]; ?>&table=criterias_option&Attr=criteria_option_id" class="btn btn-primary btn-sm mb-0">
+                    <a href="<?= base_url('datacriteriaatribut/dataoption/'.$row["criteria_option_id"].'/delete') ?>" class="btn btn-primary btn-sm mb-0 btn-hapus">
                       Hapus
                     </a>
                   </td>
@@ -131,5 +134,19 @@
   <?php $i++ ; ?>
   <?php endforeach; ?>
 </div>
+
+<script>
+  var flash = document.getElementById('flash');
+  var data = flash.getAttribute('data-flash');
+
+  if (data) {
+    swal({
+      title: "Good job!",
+      text:  data,
+      icon: "success",
+    });
+  }
+</script>
+
 
 <?= $this->endSection() ?>

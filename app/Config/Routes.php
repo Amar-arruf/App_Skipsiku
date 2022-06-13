@@ -57,12 +57,12 @@ $routes->group('datacriteriapenduduk', function($routes){
 
 $routes->group('datacriteriaatribut', function($routes){
     $routes->add('data/new', 'ManipulasiDataCriteriaAtribut::create');
-    $routes->add('data/(:segment)/edit', 'ManipulasiCriteriaAtribut::edit/$1');
-    $routes->add('data/(:segment)/delete', 'ManipulasiCriteriaAtribut::delete/$1');
+    $routes->add('data/(:segment)/edit', 'ManipulasiDataCriteriaAtribut::edit/$1');
+    $routes->add('data/(:segment)/delete', 'ManipulasiDataCriteriaAtribut::delete/$1');
 
-    $routes->add('dataoption/new', 'ManipulasiDataCriteriaAtributOption::create');
-    $routes->add('dataoption/(:segment)/edit', 'ManipulasiCriteriaAtributOption::edit/$1');
-    $routes->add('dataoption/(:segment)/delete', 'ManipulasiCriteriaAtributOption::delete/$1');
+    $routes->add('dataoption/(:segment)/new', 'ManipulasiDataCriteriaAtributOption::create/$1');
+    $routes->add('dataoption/(:segment)/edit', 'ManipulasiDataCriteriaAtributOption::edit/$1');
+    $routes->add('dataoption/(:segment)/delete', 'ManipulasiDataCriteriaAtributOption::delete/$1');
 });
 
 /*
