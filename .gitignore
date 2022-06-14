@@ -2,3 +2,5 @@
 node_modules/chokidar
 node_modules/
 *.json
+*.lock
+/vendor/
