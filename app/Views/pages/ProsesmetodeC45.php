@@ -16,8 +16,9 @@
         </div>
         <div class="card-body px-0 pb-2">
           <!-- Import data -->
-          <div class="d-flex justify-content-between">
+          <div class="d-flex">
             <button type="button" class="btn btn-info btn-sm ms-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">import csv</button>
+            <a class="btn btn-danger btn-sm ms-4 mb-4" href="<?= base_url('prosesmetodec45/delete/1')?>">delete</a>
           </div>
           <div class="table-responsive p-0">
             <table class="table align-intems-center mb-0">
@@ -99,9 +100,10 @@
         </div>
         <div class="card-body px-0 pb-2">
           <!-- Import data -->
-          <div class="d-flex justify-content-between">
+          <div class="d-flex">
             <button type="button" class="btn btn-info btn-sm ms-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal1">import csv</button>
-            <button type="button" class="btn btn-success btn-sm me-4 mb-4 justify-content-end" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-danger btn-sm ms-4 mb-4" href="<?= base_url('prosesmetodec45/delete/2')?>">delete</a>
+            <button type="button" class="btn btn-success btn-sm ms-4 mb-4 " data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               Prediksi
             </button>
           </div>
@@ -175,6 +177,7 @@
     </div>
   </div>
   <!-- collapse proses -->
+  <?php if (isset($prosesc45)): ?>
   <div class="collapse" id="collapseExample">
     <div class="row justify-content-center">
       <div class="col-5">
@@ -204,11 +207,11 @@
                       </td>
                       <td>
                         <div class="align-middle text-center text-sm">
-                          <p class="text-xs font-weight-bold mb-0 ms-3 p-3"><?= $row ?></p>
+                          <p class="text-xs font-weight-bold mb-0 ms-3 p-3"><?=$row ?></p>
                         </div>
                       </td>
                     </tr>
-                  <?php $i++; ?>
+                  <?php  $i++; ?>
                   <?php endforeach;?>
                 </tbody>
               </table>
@@ -218,6 +221,7 @@
       </div>
     </div>
   </div>
+  <?php endif; ?>
 </div>
 
 <!-- Modal import Data Latih -->

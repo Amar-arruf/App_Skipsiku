@@ -46,6 +46,7 @@ $routes->get('/prosesmetodekmeans', 'Proses::metodekmeans');
 $routes->group('prosesmetodec45', function($routes) {
     $routes->add('importcsv', 'Proses::uploadcsv');
     $routes->add('importcsvdatauji', 'Proses::uploadcsvdatauji');
+    $routes->add('delete/(:num)', 'Proses::delete/$1');
 });
 
 

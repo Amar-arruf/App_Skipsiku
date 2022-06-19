@@ -66,7 +66,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="<?= base_url('') ?>">
+            <a class="nav-link text-white <?= $uri->getSegment('1')  == 'prosesmetodec45' ? "active bg-gradient-primary": "";?>"  href="<?= base_url('prosesmetodec45') ?>">
               <div
                 class="text-white text-center me-2 d-flex align-items-center justify-content-center"
               >

@@ -13,17 +13,18 @@ class Proses extends BaseController
     $db = \Config\Database::connect();
     $data1 = $db->table('data_latih_c45')->get()->getResultArray();
     $datauji = $db->table('data_uji_c45')->get()->getResultArray();
-    if (count($data1) > 0 && count($datauji) > 0) {
-      $proses = $this->perhitungan_metode_c45();
-    }
-    
-    view('layout/navbar',['active' => 'Proses Data Mining Metode C45']);
-    return view('pages/ProsesmetodeC45',[
+
+    $data = [
       "datasetslist" => $data1,
       "datauji" => $datauji,
-      'prosesc45'=> $proses
-      ]
-  );
+    ];
+
+    if (count($data1) > 0 && count($datauji) > 0) {
+      $proses = $this->perhitungan_metode_c45();
+      $data['prosesc45'] = $proses; 
+    }
+    view('layout/navbar',['active' => 'Proses Data Mining Metode C45']);
+    return view('pages/ProsesmetodeC45', $data);
 
     
   }
@@ -110,7 +111,7 @@ public function uploadcsvdatauji()
         $session->setFlashdata("success", "data csv uji berhasil diupload");
         return redirect('prosesmetodec45');
     }
-}
+  }
   $db = \Config\Database::connect();
   $data = $db->table('data_latih_c45')->get()->getResultArray();
   $datauji = $db->table('data_uji_c45')->get()->getResultArray();
@@ -120,6 +121,35 @@ public function uploadcsvdatauji()
     "datauji" => $datauji,
     "datasets" =>$dataset
   ]);
+}
+
+public function delete( $id) 
+{
+  $session = session();
+  if ($id === 1) {
+    $db = \Config\Database::connect();
+    $data = $db->table('data_uji_c45');
+    $result = $data->truncate();
+
+    if($result) {
+      $session->setFlashdata("success", "data latih berhasil dihapus");
+      return redirect('prosesmetodec45');
+    }
+    $session->setFlashdata("success", "data latih gagal dihapus");
+    return redirect('prosesmetodec45');
+  } else {
+    $db = \Config\Database::connect();
+    $data = $db->table('data_latih_c45');
+    $result = $data->truncate();
+
+    if($result) {
+      $session->setFlashdata("success", "data latih berhasil dihapus");
+      return redirect('prosesmetodec45');
+    }
+    $session->setFlashdata("success", "data latih gagal dihapus");
+    return redirect('prosesmetodec45');
+  }
+  
 }
 
   public function perhitungan_metode_c45() 
