@@ -18,7 +18,7 @@
           <!-- Tombol Tambah -->
           <a href="<?= base_url('datapenduduk/data/new') ?>" class="btn btn-success btn btn-sm ms-4 mb-4">Tambah</a>
           <div class="table-responsive p-0">
-            <table class="table align-intems-center mb-0">
+            <table class="table align-items-center mb-0">
               <thead>
                 <tr>
                   <th class="text-uppercase align-middle text-dark text-xs text-center font-weight-bolder">Alternatif <br> ID</th>

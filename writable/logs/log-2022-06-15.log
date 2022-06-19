@@ -1,0 +1,17 @@
+CRITICAL - 2022-06-15 21:46:26 --> Undefined variable $active
+in APPPATH\Views\layout\navbar.php on line 19.
+ 1 APPPATH\Views\layout\navbar.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\layout\\navbar.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('layout/navbar', null, true)
+ 5 APPPATH\Views\layout\page_layout.php(44): CodeIgniter\View\View->include('layout/navbar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\page_layout.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/page_layout', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+10 APPPATH\Controllers\Proses.php(18): view('pages/ProsesmetodeC45', [...])
+11 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+12 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

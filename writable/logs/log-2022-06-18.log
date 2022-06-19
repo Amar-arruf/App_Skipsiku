@@ -1,0 +1,249 @@
+CRITICAL - 2022-06-18 00:19:20 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Proses.php on line 62.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Proses.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Proses')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Proses')
+ 4 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Proses', true)
+ 5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 00:20:46 --> Undefined variable $active
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 14.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(50): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-18 00:21:56 --> Duplicate entry 'D1' for key 'ID'
+CRITICAL - 2022-06-18 00:21:57 --> Duplicate entry 'D1' for key 'ID'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_latih_c45` (`ID`, `Ibu_Hamil`, `Jenis_Dinding`, `Jenis_Lantai`, `Jml_Tanggungan_Anak`, `Lansia`, `Luas_Rumah`, `Penghasilan`, `Sts_Rumah`, `Sumber_Air`, `kelas_Keputusan`) VALUES (\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\',\'Layak (chair)\'), (\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (tidak chair)\'), (\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (tidak chair)\'), (\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_latih_c45` (`ID`, `Ibu_Hamil`, `Jenis_Dinding`, `Jenis_Lantai`, `Jml_Tanggungan_Anak`, `Lansia`, `Luas_Rumah`, `Penghasilan`, `Sts_Rumah`, `Sumber_Air`, `kelas_Keputusan`) VALUES (\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\',\'Layak (chair)\'), (\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (tidak chair)\'), (\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (tidak chair)\'), (\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_latih_c45` (`ID`, `Ibu_Hamil`, `Jenis_Dinding`, `Jenis_Lantai`, `Jml_Tanggungan_Anak`, `Lansia`, `Luas_Rumah`, `Penghasilan`, `Sts_Rumah`, `Sumber_Air`, `kelas_Keputusan`) VALUES (\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\',\'Layak (chair)\'), (\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (tidak chair)\'), (\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (tidak chair)\'), (\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1778): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_latih_c45` (`ID`, `Ibu_Hamil`, `Jenis_Dinding`, `Jenis_Lantai`, `Jml_Tanggungan_Anak`, `Lansia`, `Luas_Rumah`, `Penghasilan`, `Sts_Rumah`, `Sumber_Air`, `kelas_Keputusan`) VALUES (\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\',\'Layak (chair)\'), (\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (tidak chair)\'), (\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (chair)\'), (\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\',\'Layak (tidak chair)\'), (\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\'), (\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\',\'Layak (chair)\')', null, false)
+ 5 APPPATH\Controllers\Proses.php(47): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 01:38:32 --> Undefined array key "Kelas_Keputusan"
+in APPPATH\Controllers\Proses.php on line 96.
+ 1 APPPATH\Controllers\Proses.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kelas_Keputusan"', 'APPPATH\\Controllers\\Proses.php', 96)
+ 2 APPPATH\Controllers\Proses.php(15): App\Controllers\Proses->perhitungan_metode_c45()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 01:39:15 --> Label type must be categorical or continuous, other given.
+in VENDORPATH\rubix\ml\src\Datasets\Labeled.php on line 155.
+ 1 APPPATH\Controllers\Proses.php(99): Rubix\ML\Datasets\Labeled->__construct([...], [...])
+ 2 APPPATH\Controllers\Proses.php(15): App\Controllers\Proses->perhitungan_metode_c45()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 01:40:43 --> Label type must be categorical or continuous, other given.
+in VENDORPATH\rubix\ml\src\Datasets\Labeled.php on line 155.
+ 1 APPPATH\Controllers\Proses.php(99): Rubix\ML\Datasets\Labeled->__construct([...], [...])
+ 2 APPPATH\Controllers\Proses.php(15): App\Controllers\Proses->perhitungan_metode_c45()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 01:41:46 --> Label type must be categorical or continuous, other given.
+in VENDORPATH\rubix\ml\src\Datasets\Labeled.php on line 155.
+ 1 APPPATH\Controllers\Proses.php(99): Rubix\ML\Datasets\Labeled->__construct([...], [...])
+ 2 APPPATH\Controllers\Proses.php(15): App\Controllers\Proses->perhitungan_metode_c45()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 02:44:58 --> Row at offset ID not found.
+in VENDORPATH\rubix\ml\src\Datasets\Labeled.php on line 817.
+ 1 APPPATH\Controllers\Proses.php(109): Rubix\ML\Datasets\Labeled->offsetGet('ID')
+ 2 APPPATH\Controllers\Proses.php(15): App\Controllers\Proses->perhitungan_metode_c45()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-18 06:07:56 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+CRITICAL - 2022-06-18 06:07:56 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `data_uji_c45`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data_uji_c45`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data_uji_c45`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_uji_c45`', [], false)
+ 5 APPPATH\Controllers\Proses.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-18 06:13:28 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+CRITICAL - 2022-06-18 06:13:28 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `data_uji_c45`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data_uji_c45`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data_uji_c45`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_uji_c45`', [], false)
+ 5 APPPATH\Controllers\Proses.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-18 06:15:03 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+CRITICAL - 2022-06-18 06:15:04 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `data_uji_c45`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data_uji_c45`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data_uji_c45`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_uji_c45`', [], false)
+ 5 APPPATH\Controllers\Proses.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-18 06:15:56 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+CRITICAL - 2022-06-18 06:15:57 --> Table 'spk_pkh.data_uji_c45' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `data_uji_c45`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `data_uji_c45`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `data_uji_c45`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `data_uji_c45`', [], false)
+ 5 APPPATH\Controllers\Proses.php(15): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 06:51:31 --> Dataset must contain at least 1 sample.
+in VENDORPATH\rubix\ml\src\Specifications\DatasetIsNotEmpty.php on line 47.
+ 1 VENDORPATH\rubix\ml\src\Specifications\SpecificationChain.php(43): Rubix\ML\Specifications\DatasetIsNotEmpty->check()
+ 2 VENDORPATH\rubix\ml\src\Classifiers\ClassificationTree.php(147): Rubix\ML\Specifications\SpecificationChain->check()
+ 3 APPPATH\Controllers\Proses.php(174): Rubix\ML\Classifiers\ClassificationTree->train(Object(Rubix\ML\Datasets\Labeled))
+ 4 APPPATH\Controllers\Proses.php(16): App\Controllers\Proses->perhitungan_metode_c45()
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 06:52:05 --> Dataset must contain at least 1 sample.
+in VENDORPATH\rubix\ml\src\Specifications\DatasetIsNotEmpty.php on line 47.
+ 1 VENDORPATH\rubix\ml\src\Specifications\SpecificationChain.php(43): Rubix\ML\Specifications\DatasetIsNotEmpty->check()
+ 2 VENDORPATH\rubix\ml\src\Classifiers\ClassificationTree.php(147): Rubix\ML\Specifications\SpecificationChain->check()
+ 3 APPPATH\Controllers\Proses.php(174): Rubix\ML\Classifiers\ClassificationTree->train(Object(Rubix\ML\Datasets\Labeled))
+ 4 APPPATH\Controllers\Proses.php(16): App\Controllers\Proses->perhitungan_metode_c45()
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 11:37:05 --> Undefined variable $predicted
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 198.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $predicted', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 198)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(24): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 11:37:59 --> Undefined variable $predicted
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 198.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $predicted', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 198)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(24): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 11:40:19 --> Cannot access offset of type string on string
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 207.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 4 APPPATH\Controllers\Proses.php(24): view('pages/ProsesmetodeC45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 11:43:17 --> Cannot access offset of type string on string
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 207.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 4 APPPATH\Controllers\Proses.php(24): view('pages/ProsesmetodeC45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 11:44:31 --> Cannot access offset of type string on string
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 207.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 4 APPPATH\Controllers\Proses.php(24): view('pages/ProsesmetodeC45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 11:54:53 --> Cannot access offset of type string on string
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 207.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 4 APPPATH\Controllers\Proses.php(24): view('pages/ProsesmetodeC45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-18 11:59:48 --> Cannot access offset of type string on string
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 207.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 4 APPPATH\Controllers\Proses.php(24): view('pages/ProsesmetodeC45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

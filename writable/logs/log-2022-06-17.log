@@ -1,0 +1,128 @@
+CRITICAL - 2022-06-17 22:01:32 --> Undefined variable $active
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 10.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(17): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:14:48 --> Undefined variable $active
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 10.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(56): view('pages/ProsesmetodeC45')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:18:34 --> Undefined variable $datasetslist
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 40.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datasetslist', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(57): view('pages/ProsesmetodeC45')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:20:00 --> Undefined variable $data
+in APPPATH\Controllers\Proses.php on line 57.
+ 1 APPPATH\Controllers\Proses.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Proses.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:23:20 --> Undefined property: App\Controllers\Proses::$db
+in APPPATH\Controllers\Proses.php on line 49.
+ 1 APPPATH\Controllers\Proses.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Proses::$db', 'APPPATH\\Controllers\\Proses.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:29:47 --> Undefined variable $session
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 5.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(18): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:30:46 --> Call to a member function table() on null
+in APPPATH\Controllers\Proses.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:33:46 --> insertBatch() called with no data
+in SYSTEMPATH\Database\BaseBuilder.php on line 1749.
+ 1 APPPATH\Controllers\Proses.php(50): CodeIgniter\Database\BaseBuilder->insertBatch([])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:37:31 --> Undefined property: App\Controllers\Proses::$db
+in APPPATH\Controllers\Proses.php on line 15.
+ 1 APPPATH\Controllers\Proses.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Proses::$db', 'APPPATH\\Controllers\\Proses.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:37:45 --> Undefined property: App\Controllers\Proses::$db
+in APPPATH\Controllers\Proses.php on line 15.
+ 1 APPPATH\Controllers\Proses.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Proses::$db', 'APPPATH\\Controllers\\Proses.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 22:38:10 --> Undefined array key "Kelas_Keputusan"
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 80.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Kelas_Keputusan"', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(17): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-17 23:33:09 --> Path cannot be empty
+in APPPATH\Controllers\Proses.php on line 26.
+ 1 APPPATH\Controllers\Proses.php(26): file('ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-17 23:42:04 --> Cannot add or update a child row: a foreign key constraint fails (`spk_pkh`.`data_latih_c45`, CONSTRAINT `data_latih_c45_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `data_penduduk_value` (`Data_Pendudukid`))
+CRITICAL - 2022-06-17 23:42:05 --> Cannot add or update a child row: a foreign key constraint fails (`spk_pkh`.`data_latih_c45`, CONSTRAINT `data_latih_c45_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `data_penduduk_value` (`Data_Pendudukid`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `data_latih_c45` (`ibu_hamil`, `id`, `jenis_atap`, `jenis_dinding`, `jenis_lantai`, `jml_tanggungan_anak`, `kelas_Keputusan`, `lansia`, `luas_rumah`, `penghasilan`, `sts_rumah`, `sumber_air`) VALUES (\'Ibu Hamil Menyusui\',\'ID\',\'Jenis Atap\',\'Jenis Dinding\',\'Jenis Lantai\',\'Jml Tanggungan Anak\',\'Kelas Keputusan\',\'Lansia\',\'Luas Rumah\',\'Penghasilan\',\'Sts. Rumah\',\'Sumber air \'), (\'Rendah\',\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\'), (\'Rendah\',\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `data_latih_c45` (`ibu_hamil`, `id`, `jenis_atap`, `jenis_dinding`, `jenis_lantai`, `jml_tanggungan_anak`, `kelas_Keputusan`, `lansia`, `luas_rumah`, `penghasilan`, `sts_rumah`, `sumber_air`) VALUES (\'Ibu Hamil Menyusui\',\'ID\',\'Jenis Atap\',\'Jenis Dinding\',\'Jenis Lantai\',\'Jml Tanggungan Anak\',\'Kelas Keputusan\',\'Lansia\',\'Luas Rumah\',\'Penghasilan\',\'Sts. Rumah\',\'Sumber air \'), (\'Rendah\',\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\'), (\'Rendah\',\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `data_latih_c45` (`ibu_hamil`, `id`, `jenis_atap`, `jenis_dinding`, `jenis_lantai`, `jml_tanggungan_anak`, `kelas_Keputusan`, `lansia`, `luas_rumah`, `penghasilan`, `sts_rumah`, `sumber_air`) VALUES (\'Ibu Hamil Menyusui\',\'ID\',\'Jenis Atap\',\'Jenis Dinding\',\'Jenis Lantai\',\'Jml Tanggungan Anak\',\'Kelas Keputusan\',\'Lansia\',\'Luas Rumah\',\'Penghasilan\',\'Sts. Rumah\',\'Sumber air \'), (\'Rendah\',\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\'), (\'Rendah\',\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1778): CodeIgniter\Database\BaseConnection->query('INSERT INTO `data_latih_c45` (`ibu_hamil`, `id`, `jenis_atap`, `jenis_dinding`, `jenis_lantai`, `jml_tanggungan_anak`, `kelas_Keputusan`, `lansia`, `luas_rumah`, `penghasilan`, `sts_rumah`, `sumber_air`) VALUES (\'Ibu Hamil Menyusui\',\'ID\',\'Jenis Atap\',\'Jenis Dinding\',\'Jenis Lantai\',\'Jml Tanggungan Anak\',\'Kelas Keputusan\',\'Lansia\',\'Luas Rumah\',\'Penghasilan\',\'Sts. Rumah\',\'Sumber air \'), (\'Rendah\',\'D1\',\'Rendah\',\'Sedang\',\'Rendah\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D2\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D3\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D4\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Sedang\'), (\'Rendah\',\'D5\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D6\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D7\',\'Rendah\',\'Sedang\',\'Tinggi\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D8\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D9\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (chair)\',\'Rendah\',\'Sangat Tinggi\',\'Cukup \',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D10\',\'Rendah\',\'Rendah\',\'Sedang\',\'Sangat Sedikit\',\'Layak (chair)\',\'Tinggi\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D11\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedikit\',\'Layak (tidak chair)\',\'Rendah\',\'Sangat Tinggi\',\'Sedikit\',\'Rendah\',\'Rendah\'), (\'Rendah\',\'D12\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\'), (\'Rendah\',\'D13\',\'Rendah\',\'Rendah\',\'Rendah\',\'Sedang\',\'Layak (chair)\',\'Rendah\',\'Tinggi\',\'Sedikit\',\'Tinggi\',\'Rendah\')', null, false)
+ 5 APPPATH\Controllers\Proses.php(47): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->uploadcsv()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

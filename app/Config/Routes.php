@@ -40,9 +40,15 @@ $routes->get('/dashboard', 'Home::index');
 $routes->get('/datapenduduk', 'Page::datapenduduk');
 $routes->get('/datacriteriapenduduk', 'Page::datacriteriapenduduk');
 $routes->get('/datacriteriaatribut', 'Page::datacriteriatribut');
-$routes->get('/prosesmetodec45', 'Proses::metodec45');
+$routes->get('/prosesmetodec45', 'Proses::index');
 $routes->get('/prosesmetodekmeans', 'Proses::metodekmeans');
-;
+
+$routes->group('prosesmetodec45', function($routes) {
+    $routes->add('importcsv', 'Proses::uploadcsv');
+    $routes->add('importcsvdatauji', 'Proses::uploadcsvdatauji');
+});
+
+
 $routes->group('datapenduduk', function($routes){
     $routes->add('data/new', 'ManipulasiDataPenduduk::create');
     $routes->add('data/(:segment)/edit', 'ManipulasiDataPenduduk::edit/$1');

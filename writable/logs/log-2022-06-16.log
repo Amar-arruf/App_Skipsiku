@@ -1,0 +1,156 @@
+CRITICAL - 2022-06-16 08:41:11 --> Object of class Generator could not be converted to string
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 5.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 4 APPPATH\Controllers\Proses.php(69): view('pages/ProsesmetodeC45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 08:41:44 --> Object of class Generator could not be converted to string
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 5.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 4 APPPATH\Controllers\Proses.php(69): view('pages/ProsesmetodeC45', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 09:20:06 --> Cannot instantiate abstract class Rubix\ML\Graph\Trees\DecisionTree
+in APPPATH\Controllers\Proses.php on line 65.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 09:35:46 --> Cannot instantiate abstract class Rubix\ML\Graph\Trees\DecisionTree
+in APPPATH\Controllers\Proses.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 09:35:48 --> Cannot instantiate abstract class Rubix\ML\Graph\Trees\DecisionTree
+in APPPATH\Controllers\Proses.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 09:41:45 --> Array to string conversion
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 5.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(76): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 10:22:14 --> Number of predictions and labels must be equal 3 predictions but 10 labels given.
+in VENDORPATH\rubix\ml\src\Specifications\PredictionAndLabelCountsAreEqual.php on line 56.
+ 1 VENDORPATH\rubix\ml\src\CrossValidation\Reports\ConfusionMatrix.php(50): Rubix\ML\Specifications\PredictionAndLabelCountsAreEqual->check()
+ 2 APPPATH\Controllers\Proses.php(71): Rubix\ML\CrossValidation\Reports\ConfusionMatrix->generate([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 10:22:16 --> Number of predictions and labels must be equal 3 predictions but 10 labels given.
+in VENDORPATH\rubix\ml\src\Specifications\PredictionAndLabelCountsAreEqual.php on line 56.
+ 1 VENDORPATH\rubix\ml\src\CrossValidation\Reports\ConfusionMatrix.php(50): Rubix\ML\Specifications\PredictionAndLabelCountsAreEqual->check()
+ 2 APPPATH\Controllers\Proses.php(71): Rubix\ML\CrossValidation\Reports\ConfusionMatrix->generate([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:24:28 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 536870920 bytes)
+in APPPATH\Controllers\Proses.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-06-16 20:25:57 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 536870920 bytes)
+in APPPATH\Controllers\Proses.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-06-16 20:33:20 --> Number of predictions and labels must be equal 3 predictions but 10 labels given.
+in VENDORPATH\rubix\ml\src\Specifications\PredictionAndLabelCountsAreEqual.php on line 56.
+ 1 VENDORPATH\rubix\ml\src\CrossValidation\Reports\ConfusionMatrix.php(50): Rubix\ML\Specifications\PredictionAndLabelCountsAreEqual->check()
+ 2 APPPATH\Controllers\Proses.php(75): Rubix\ML\CrossValidation\Reports\ConfusionMatrix->generate([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:37:34 --> Number of predictions and labels must be equal 3 predictions but 10 labels given.
+in VENDORPATH\rubix\ml\src\Specifications\PredictionAndLabelCountsAreEqual.php on line 56.
+ 1 VENDORPATH\rubix\ml\src\CrossValidation\Reports\ConfusionMatrix.php(50): Rubix\ML\Specifications\PredictionAndLabelCountsAreEqual->check()
+ 2 APPPATH\Controllers\Proses.php(76): Rubix\ML\CrossValidation\Reports\ConfusionMatrix->generate([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:37:41 --> Number of predictions and labels must be equal 3 predictions but 10 labels given.
+in VENDORPATH\rubix\ml\src\Specifications\PredictionAndLabelCountsAreEqual.php on line 56.
+ 1 VENDORPATH\rubix\ml\src\CrossValidation\Reports\ConfusionMatrix.php(50): Rubix\ML\Specifications\PredictionAndLabelCountsAreEqual->check()
+ 2 APPPATH\Controllers\Proses.php(76): Rubix\ML\CrossValidation\Reports\ConfusionMatrix->generate([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:39:13 --> Number of predictions and labels must be equal 3 predictions but 10 labels given.
+in VENDORPATH\rubix\ml\src\Specifications\PredictionAndLabelCountsAreEqual.php on line 56.
+ 1 VENDORPATH\rubix\ml\src\CrossValidation\Reports\ConfusionMatrix.php(50): Rubix\ML\Specifications\PredictionAndLabelCountsAreEqual->check()
+ 2 APPPATH\Controllers\Proses.php(82): Rubix\ML\CrossValidation\Reports\ConfusionMatrix->generate([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:39:40 --> Number of predictions and labels must be equal 3 predictions but 10 labels given.
+in VENDORPATH\rubix\ml\src\Specifications\PredictionAndLabelCountsAreEqual.php on line 56.
+ 1 VENDORPATH\rubix\ml\src\CrossValidation\Reports\ConfusionMatrix.php(50): Rubix\ML\Specifications\PredictionAndLabelCountsAreEqual->check()
+ 2 APPPATH\Controllers\Proses.php(82): Rubix\ML\CrossValidation\Reports\ConfusionMatrix->generate([...], [...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:40:04 --> Number of samples and labels must be equal, 10 samples but 3 labels given.
+in VENDORPATH\rubix\ml\src\Datasets\Labeled.php on line 144.
+ 1 APPPATH\Controllers\Proses.php(61): Rubix\ML\Datasets\Labeled->__construct([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:42:18 --> Undefined variable $result
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 5.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(93): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-16 20:55:00 --> Array to string conversion
+in APPPATH\Views\pages\ProsesmetodeC45.php on line 6.
+ 1 APPPATH\Views\pages\ProsesmetodeC45.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\pages\\ProsesmetodeC45.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\ProsesmetodeC45.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/ProsesmetodeC45', [], true)
+ 5 APPPATH\Controllers\Proses.php(93): view('pages/ProsesmetodeC45', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Proses->perhitungan_metode_c45()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Proses))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
