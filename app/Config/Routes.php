@@ -41,12 +41,17 @@ $routes->get('/datapenduduk', 'Page::datapenduduk');
 $routes->get('/datacriteriapenduduk', 'Page::datacriteriapenduduk');
 $routes->get('/datacriteriaatribut', 'Page::datacriteriatribut');
 $routes->get('/prosesmetodec45', 'Proses::index');
-$routes->get('/prosesmetodekmeans', 'Proses::metodekmeans');
+$routes->get('/prosesmetodekmeans', 'Proseskmeans::index');
 
 $routes->group('prosesmetodec45', function($routes) {
     $routes->add('importcsv', 'Proses::uploadcsv');
     $routes->add('importcsvdatauji', 'Proses::uploadcsvdatauji');
     $routes->add('delete/(:num)', 'Proses::delete/$1');
+});
+
+$routes->group('prosesmetodekmeans', function($routes) {
+    $routes->add('uploadcsv', 'Proseskmeans::importcsv');
+    $routes->add('delete/(:num)', 'Proseskmeans::delete/$1');
 });
 
 

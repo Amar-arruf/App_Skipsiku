@@ -201,10 +201,14 @@ public function delete( $id)
     $datatest = new Unlabeled($sampelsUji);
 
     $estimator = new ClassificationTree(10, 5, 0.001, null, null);
-
+    
     $training =  $estimator->train($dataset);
     // mengecheck data dilatih atau belum yang mengembalikan type data boolean
+
     $trained = $estimator->trained();
+
+    $height = $estimator->height();
+
     // Testing
     $predictions= $estimator->predict($datatest);
 
@@ -214,7 +218,8 @@ public function delete( $id)
       'prediksi' => $predictions,
       'samples' =>$samples,
       'samplesUji' => $sampelsUji,
-      'datatesting' => $datatest
+      'datatesting' => $datatest,
+      'heighttree' => $height
     ];
 
     return $data;
