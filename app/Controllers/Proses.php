@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Rubix\ML\Datasets\Labeled;
 use Rubix\ML\Classifiers\ClassificationTree;
+use Rubix\ML\CrossValidation\Reports\ConfusionMatrix;
 use Rubix\ML\Datasets\Unlabeled;
 
 class Proses extends BaseController
@@ -200,7 +201,7 @@ public function delete( $id)
     $dataset = new Labeled($samples, $labels);
     $datatest = new Unlabeled($sampelsUji);
 
-    $estimator = new ClassificationTree(10, 5, 0.001, null, null);
+    $estimator = new ClassificationTree(10, 5, 0.0, null, null);
     
     $training =  $estimator->train($dataset);
     // mengecheck data dilatih atau belum yang mengembalikan type data boolean
@@ -211,6 +212,17 @@ public function delete( $id)
 
     // Testing
     $predictions= $estimator->predict($datatest);
+    $new_predictions = [];
+    
+    foreach($predictions as $row) {
+        $new_predictions[] = $row;
+    }
+
+    // validation 
+    $report = new ConfusionMatrix();
+    $result = $report->generate($new_predictions, $labelsUji);
+
+    $new_result = iterator_to_array($result,true);
 
     $data = [
       'active' => 'Proses Data Mining Metode C45',
@@ -219,7 +231,8 @@ public function delete( $id)
       'samples' =>$samples,
       'samplesUji' => $sampelsUji,
       'datatesting' => $datatest,
-      'heighttree' => $height
+      'heighttree' => $height,
+      'report' => $new_result
     ];
 
     return $data;

@@ -42,6 +42,7 @@ $routes->get('/datacriteriapenduduk', 'Page::datacriteriapenduduk');
 $routes->get('/datacriteriaatribut', 'Page::datacriteriatribut');
 $routes->get('/prosesmetodec45', 'Proses::index');
 $routes->get('/prosesmetodekmeans', 'Proseskmeans::index');
+$routes->get('/performance', 'Performance::index');
 
 $routes->group('prosesmetodec45', function($routes) {
     $routes->add('importcsv', 'Proses::uploadcsv');

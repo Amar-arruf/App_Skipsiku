@@ -6,6 +6,7 @@ use Rubix\ML\Datasets\Unlabeled;
 use Rubix\ML\Clusterers\KMeans;
 use Rubix\ML\Kernels\Distance\Euclidean;
 use Rubix\ML\Clusterers\Seeders\Preset;
+use Rubix\ML\CrossValidation\Reports\ConfusionMatrix;
 
 class Proseskmeans extends BaseController 
 {
@@ -178,13 +179,23 @@ class Proseskmeans extends BaseController
     $trained = $estimator->trained();
     
     $testing = $estimator->predict($dataset);
+    $new_predictions = [];
 
+    foreach ($testing as $row) {
+      $new_predictions[] = strval($row);
+    }
+
+    $report = new ConfusionMatrix();
+    $result = $report->generate($new_predictions,$lables_Actual);
+    
+    $new_result = iterator_to_array($result,true);
 
     return $data = [
       "samples" => $samples,
       "data_training" => $training,
       "trained" => $trained,
-      "testing" =>  $testing,
+      "testing" =>  $new_predictions,
+      "report" => $new_result
     ];
 
   }

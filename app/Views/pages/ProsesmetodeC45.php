@@ -21,7 +21,7 @@
             <a class="btn btn-danger btn-sm ms-4 mb-4" href="<?= base_url('prosesmetodec45/delete/1')?>">delete</a>
           </div>
           <div class="table-responsive p-0">
-            <table class="table align-intems-center mb-0">
+            <table class="table align-items-center mb-0">
               <thead>
                 <tr>
                   <th class="text-uppercase align-middle text-dark text-xs text-center font-weight-bolder">ID</th>

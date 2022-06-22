@@ -80,7 +80,7 @@
                     <p class="text-xs font-weight-bold mb-0"><?= $row["Jenis_Atap"]; ?></p>
                   </td>
                   <td class="align-middle text-center text-sm">
-                    <p class="text-xs font-weight-bold mb-0"><?= $row["kelas_Keputusan"]; ?></p>
+                    <p class="text-xs font-weight-bold mb-0"><?= $row["kelas_Keputusan"] === "0" ? "Layak (chair)" : "Layak (tidak chair)" ?></p>
                   </td>
                 </tr>
                 <?php $i++; ?>
