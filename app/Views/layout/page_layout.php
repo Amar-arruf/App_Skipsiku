@@ -55,17 +55,18 @@
   <script src="<?= base_url('assets/js/plugins/perfect-scrollbar.min.js') ?>"></script>
   <script src="<?= base_url('assets/js/plugins/perfect-scrollbar.min.js') ?>"></script>
   
+  
 
-    <!-- Control Center for Material Dashboard:  -->
-    <script src="<?= base_url('assets/js/material-dashboard.min.js?v=3.0.2') ?>"></script>
-    <script>
-      var Main = document.getElementsByClassName("main-content")[0];
-      var humbergerMenu = document.getElementById("humbugerMenu");
+  <!-- Control Center for Material Dashboard:  -->
+  <script src="<?= base_url('assets/js/material-dashboard.min.js?v=3.0.2') ?>"></script>
+  <script>
+    var Main = document.getElementsByClassName("main-content")[0];
+    var humbergerMenu = document.getElementById("humbugerMenu");
 
-      humbergerMenu.addEventListener("click", () => {
-        Main.classList.toggle("notactive");
-      })
-    </script>
+    humbergerMenu.addEventListener("click", () => {
+      Main.classList.toggle("notactive");
+    })
+  </script>
   <script>
     var btnDelete = document.getElementsByClassName("btn-hapus");
 
@@ -95,5 +96,6 @@
       
     }
   </script>
+  
 </body>
 </html>

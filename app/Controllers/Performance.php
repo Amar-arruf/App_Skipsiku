@@ -51,7 +51,7 @@ class Performance extends BaseController
     ];
 
 
-    $data = [
+    return $data = [
       'active' => "Performance",
       'metodeC45' => $metodeC45,
       'perform' => $perform,
