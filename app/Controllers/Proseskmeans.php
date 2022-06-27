@@ -63,7 +63,7 @@ class Proseskmeans extends BaseController
           $builder->insertBatch($dataset);
           $session = session();
           $session->setFlashdata("success", "data csv berhasil diupload");
-          return redirect('ProsesmetodeKmeans');
+          return redirect('prosesmetodekmeans');
       }
     }
     $db = \Config\Database::connect();
@@ -74,20 +74,20 @@ class Proseskmeans extends BaseController
     ]);
   }
 
-  public function delete($id)
+  public function Delete($id)
   {
     $session = session();
-    if ($id === 3) {
+    if ($id == 1) {
       $db = \Config\Database::connect();
-      $data = $db->table('data_latih_kmeans');
-      $result = $data->emptyTable();
+      $builder = $db->table('data_latih_kmeans');
+      $result = $builder->truncate();
 
       if($result) {
         $session->setFlashdata("success", "data latih berhasil dihapus");
-        return redirect('ProsesmetodeKmeans');
+        return redirect('prosesmetodekmeans');
       }
       $session->setFlashdata("success", "data latih gagal dihapus");
-      return redirect('ProsesmetodeKmeans');
+      return redirect('prosesmetodekmeans');
     }
   }
 
@@ -180,21 +180,33 @@ class Proseskmeans extends BaseController
     
     $testing = $estimator->predict($dataset);
     $new_predictions = [];
+    $new_testing =[];
 
     foreach ($testing as $row) {
       $new_predictions[] = strval($row);
     }
+
+    $i = 0;
+    foreach ($record as $value) {
+      $new_testing[] = [
+        $value["ID"],
+        strval($new_predictions[$i])
+      ];
+      $i++;
+    }
+
 
     $report = new ConfusionMatrix();
     $result = $report->generate($new_predictions,$lables_Actual);
     
     $new_result = iterator_to_array($result,true);
 
+
     return $data = [
       "samples" => $samples,
       "data_training" => $training,
       "trained" => $trained,
-      "testing" =>  $new_predictions,
+      "testing" =>  $new_testing,
       "report" => $new_result
     ];
 

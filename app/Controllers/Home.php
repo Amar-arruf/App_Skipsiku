@@ -13,7 +13,7 @@ class Home extends BaseController
 
 
         $performance = new Performance();
-        $perform = $performance->index();
+        $perform = $performance->perform();
         
         $count = [
             'jumlah_lansia' => $model->where('Lansia', 'Ada')->countAllResults(),
@@ -21,8 +21,8 @@ class Home extends BaseController
             'jumlah_ibu_Hamil' => $model->where('Ibu_Hamil_/_Menyusui', 'Ada')->countAllResults()
         ];
 
-        $perform_metodc45 = $perform['perform'];
-        $perform_metodekmeans = $perform['performKmeans'];
+        $perform_metodc45 = $perform['metode_c45'];
+        $perform_metodekmeans = $perform['metode_kmeans'];
 
         $data = [
             'active' => "Dashboard",

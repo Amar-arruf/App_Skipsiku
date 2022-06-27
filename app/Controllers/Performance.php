@@ -7,6 +7,19 @@ class Performance extends BaseController
 {
   public function index()
   {
+    $performa = $this->perform();
+    
+    $data = [
+      'active' => "Performance",
+      'metodeC45' => $performa["metodeC45"],
+      'perform' => $performa["metode_c45"],
+      'metodeKmeans' => $performa["metodeKmeans"],
+      'performKmeans' => $performa["metode_kmeans"]
+    ];
+    return view('pages/performance', $data);
+  }
+  public function perform()
+  {
     // metode C45
     $object = new Proses();
     $metodeC45 = $object->perhitungan_metode_c45();
@@ -21,7 +34,7 @@ class Performance extends BaseController
     $precision = floatval(($TP / ($TP + $FP)) *100);
     $recall = floatval(($TP / ($TP+$FN)) * 100);
 
-    $perform = [
+    $perform_c45 = [
       "accuracy" => $accuracy,
       "error" => $error,
       "precision" => $precision,
@@ -50,14 +63,12 @@ class Performance extends BaseController
       "recall_1" => round($recall_1,2)
     ];
 
-
-    return $data = [
-      'active' => "Performance",
+    return $data_Perform = [
       'metodeC45' => $metodeC45,
-      'perform' => $perform,
       'metodeKmeans' => $metodeKmeans,
-      'performKmeans' => $perform_kmeans
+      "metode_c45" => $perform_c45,
+      "metode_kmeans" => $perform_kmeans
     ];
-    return view('pages/performance', $data);
   }
+
 }

@@ -52,7 +52,7 @@ $routes->group('prosesmetodec45', function($routes) {
 
 $routes->group('prosesmetodekmeans', function($routes) {
     $routes->add('uploadcsv', 'Proseskmeans::importcsv');
-    $routes->add('delete/(:num)', 'Proseskmeans::delete/$1');
+    $routes->add('Delete/(:num)', 'Proseskmeans::Delete/$1');
 });
 
 

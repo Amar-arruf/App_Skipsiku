@@ -18,7 +18,7 @@
           <!-- Import data -->
           <div class="d-flex">
             <button type="button" class="btn btn-info btn-sm ms-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">import csv</button>
-            <a class="btn btn-danger btn-sm ms-4 mb-4" href="<?= base_url('prosesmetodekmeans/delete/3')?>">delete</a>
+            <a class="btn btn-danger btn-sm ms-4 mb-4" href="<?= base_url('prosesmetodekmeans/Delete/1')?>">delete</a>
             <button type="button" class="btn btn-success btn-sm ms-4 mb-4 " data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               Prediksi
             </button>
@@ -118,12 +118,13 @@
                     <tr>
                       <td>
                         <div class="align-middle text-center text-sm">
-                          <p class="text-xs font-weight-bold mb-0 me-3 p-3"><?= "D".$i ?></p>
+                          <p class="text-xs font-weight-bold mb-0 me-3 p-3"><?= $row[0] ?>
+                          </p>
                         </div>
                       </td>
                       <td>
                         <div class="align-middle text-center text-sm">
-                          <p class="text-xs font-weight-bold mb-0 ms-3 p-3"><?= $row == 0 ? "Layak (chair)" : "Layak (tidak chair)"?></p>
+                          <p class="text-xs font-weight-bold mb-0 ms-3 p-3"><?= $row[1] == 0 ? "Layak (chair)" : "Layak (tidak chair)"?></p>
                         </div>
                       </td>
                     </tr>
