@@ -9,6 +9,17 @@
   margin-left: 0rem !important;
 }
 
+.dropdown.dropdown-hover:hover > .dropdown-menu:before,
+.dropdown .dropdown-menu.show:before {
+  top: -21px;
+  left: 98px !important;
+}
+
+.dropdown:not(.dropdown-hover) .dropdown-menu.show {
+  margin-top: 2.8125rem !important;
+  margin-left: -4.801rem !important;
+}
+
 @media (min-width: 1200px) {
   .d-xl-none {
     display: flex !important;

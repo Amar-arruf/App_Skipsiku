@@ -48,12 +48,17 @@
                   </div>
                 </a>
               </li>
-              <li class="nav-item px-3 d-flex align-items-center">
-                <a href="" class="nav-link text-body p-0">
+              <li class="nav-item px-3 d-flex align-items-center dropdown">
+                <a href="#" class="nav-link text-body p-0 dropdown-toggle" data-bs-toggle="dropdown" id="dropdownMenuButton" aria-expanded="false">
                   <i
                     class="fa fa-cog fs-4 fixed-plugin-button-nav cursor-pointer"
                   ></i>
                 </a>
+                <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">Ubah Profil</a></li>
+                  <li><a class="dropdown-item" href="#">Ubah Password</a></li>
+                  <li><a class="dropdown-item" href="<?= base_url("Auth/logout") ?>">Logout</a></li>
+                </ul>
               </li>
             </ul>
           </div>
