@@ -33,10 +33,10 @@ class Auth extends BaseController
 
         return redirect('dashboard');
       } else {
-        return redirect()->to('/login')->with('gagal', 'Password Salah');
+        return redirect()->to('/')->with('gagal', 'Password Salah');
       }
     } else {
-      return redirect()->to('/login')->with('gagal', 'login gagal');
+      return redirect()->to('/')->with('gagal', 'login gagal');
     }
   }
 

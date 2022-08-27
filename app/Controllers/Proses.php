@@ -127,9 +127,9 @@ public function uploadcsvdatauji()
 public function delete( $id) 
 {
   $session = session();
-  if ($id === 1) {
+  if ($id == 1) {
     $db = \Config\Database::connect();
-    $data = $db->table('data_uji_c45');
+    $data = $db->table('data_latih_c45');
     $result = $data->truncate();
 
     if($result) {
@@ -140,7 +140,7 @@ public function delete( $id)
     return redirect('prosesmetodec45');
   } else {
     $db = \Config\Database::connect();
-    $data = $db->table('data_latih_c45');
+    $data = $db->table('data_uji_c45');
     $result = $data->truncate();
 
     if($result) {
