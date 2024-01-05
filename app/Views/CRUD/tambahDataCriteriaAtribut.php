@@ -32,7 +32,7 @@
                         <?php $i = 1; ?>
                         <?php foreach($value->getResultArray() as $get) : ?>
                         <option value="<?= $get["user_id"]; ?>"><?= $get["user_id"]; ?></option>
-                        <?php $i++; ?>
+                        <?php ++$i; ?>
                         <?php endforeach; ?>
                       </select>
                     </div>

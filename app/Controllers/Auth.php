@@ -1,17 +1,17 @@
-<?php 
+<?php
 
 namespace App\Controllers;
 
-class Auth extends BaseController 
+class Auth extends BaseController
 {
   public $db;
   public $session;
-  public function index() 
+  public function index()
   {
     return redirect('login');
   }
 
-  public function login() 
+  public function login()
   {
     if (session('id_user')) {
       return redirect()->to(site_url('dashboard'));
@@ -25,12 +25,11 @@ class Auth extends BaseController
     $this->db = \Config\Database::connect();
     $post = $this->request->getPost();
     $query = $this->db->table('user/admin')->getWhere(['username' => $post['username']]);
-    $user =$query->getRow();
-    if($user) {
-      if($post['Password'] === $user->password ) {
+    $user = $query->getRow();
+    if ($user) {
+      if ($post['Password'] === $user->password) {
         $params = ['id_user' => $user->user_id];
         $this->session->set($params);
-
         return redirect('dashboard');
       } else {
         return redirect()->to('/')->with('gagal', 'Password Salah');
@@ -40,7 +39,7 @@ class Auth extends BaseController
     }
   }
 
-  public function logout() 
+  public function logout()
   {
     session()->remove('id_user');
     return redirect()->to(site_url('/'));
