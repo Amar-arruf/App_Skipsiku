@@ -30,6 +30,10 @@ untuk bisa di jalankan di local server anda perlu mensiapkan sebuah server local
 - kemudian jalankan perintah
 
 ```ps
+  composer install
+```
+
+```ps
   php spark server
 ```
 
