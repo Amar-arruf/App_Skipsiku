@@ -1,0 +1,7 @@
+{
+    "require": {
+        "codeigniter4/framework": "^4.2",
+        "rubix/ml": "^2.0",
+        "phpoffice/phpspreadsheet": "^1.23"
+    }
+}

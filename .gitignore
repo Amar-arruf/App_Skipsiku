@@ -1,7 +1,7 @@
 \node_modules/
 node_modules/chokidar
 node_modules/
-*.json
+
 composer.lock
 /vendor/
 
