@@ -3,7 +3,7 @@ node_modules/chokidar
 node_modules/
 
 composer.lock
-/vendor/
+vendor/
 
 #-------------------------
 # Temporary Files

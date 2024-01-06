@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8061b835891df0506a5b024e454fd120daa94c4f',
+        'reference' => 'bfbb2eca077fae91450ec3bcfde1b9b8e6a38889',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8061b835891df0506a5b024e454fd120daa94c4f',
+            'reference' => 'bfbb2eca077fae91450ec3bcfde1b9b8e6a38889',
             'dev_requirement' => false,
         ),
         'amphp/amp' => array(
