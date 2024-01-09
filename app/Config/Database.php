@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'database' => '',
+        'hostname' => 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com',
+        'username' => '4GMMwrrTEyg7wp4.root',
+        'password' => 'k0OFRvfA4FBu671D',
+        'database' => 'spkpkh',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -43,11 +43,14 @@ class Database extends Config
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
-        'encrypt'  => false,
+        'encrypt'  => array(
+            'ssl_ca'     => FCPATH . 'isrgrootx1.pem',
+            'ssl_verify' => false,
+        ),
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 3306,
+        'port'     => 4000,
     ];
 
     /**
